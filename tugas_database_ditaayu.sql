@@ -1,5 +1,6 @@
 CREATE DATABASE collection_directory;
 
+--TABLE 1
 CREATE TABLE album_collect(id_album INT, album_title VARCHAR(64), album_artist VARCHAR(64), album_release VARCHAR(64), album_price INT, store VARCHAR(64));
 INSERT INTO album_collect(id_album, album_title, album_artist, album_release, album_price)VALUES(1, 'Emphaty', 'NCT 2018', '2018', 330000, 'kpopsale');
 SELECT * FROM album_collect;
@@ -9,6 +10,7 @@ DELETE FROM album_collect WHERE id_album=6;
 SELECT * FROM album_collect ORDER BY album_price asc;
 SELECT album_title FROM album_collect WHERE album_artist='NCT 127';
 
+--TABLE 2
 CREATE TABLE book_collect (id_book INT, book_title VARCHAR(64), book_release VARCHAR(64), book_writer VARCHAR(64), book_publisher VARCHAR(64), book_price INT);
 INSERT INTO book_collect(id_album, book_title, book_release, book_writer, book_publisher, book_price)VALUES(1,'The Alpha Girls Guide', '2015', 'Henry Manampiring', 'gagasmedia', 88000);
 SELECT book_collect.id_book, book_collect.book_title FROM book_collect;
@@ -17,6 +19,7 @@ DELETE FROM book_collect WHERE id=6;
 SELECT * FROM book_collect ORDER BY book_price desc;
 SELECT book_release FROM book_collect WHERE id_book=3;
 
+--TABLE 3
 CREATE TABLE photocard_collect (id_poca INT, poca_group_name VARCHAR(64), poca_member_name VARCHAR(64), poca_version VARCHAR(64), poca_price INT);
 INSERT INTO photocard_collect(id_poca, poca_group_name, poca_member_name, poca_version, poca_price)VALUES(1, 'zerobaseone', 'Seok Matthew', 'Makestar Benefit R2', 125000);
 SELECT id_poca FROM photocard_collect;
@@ -25,6 +28,7 @@ DELETE FROM photocard_collect WHERE id_poca=1;
 SELECT * FROM photocard_collect ORDER BY id_poca desc;
 SELECT poca_version, poca_group_name FROM photocard_collect WHERE poca_price<75000; 
 
+--TABLE 4
 CREATE TABLE merchandise_collect (id_md INT, md_group_name VARCHAR(64), md_type VARCHAR(64), md_price INT);
 INSERT INTO merchandise_collect(id_md, md_group_name, md_type, md_price)VALUES(1, 'jebewon', 'Fancon Necklace', 168000);
 SELECT merchandise_collect.md_type FROM merchandise_collect;
@@ -33,6 +37,7 @@ DELETE FROM merchandise_collect WHERE id_md=5;
 SELECT * FROM merchandise_collect ORDER BY id_md asc;
 SELECT md_price FROM merchandise_collect WHERE md_group_name='jebewon';
 
+--TABLE 5
 CREATE TABLE store_details (id_store INT, store_name VARCHAR(64), domicile VARCHAR(64), tax INT);
 INSERT INTO store_details (id_store, store_name, domicile, tax)VALUES(1, 'kpopsale', 'Jakarta Selatan', 15000);
 SELECT * FROM store_details;
